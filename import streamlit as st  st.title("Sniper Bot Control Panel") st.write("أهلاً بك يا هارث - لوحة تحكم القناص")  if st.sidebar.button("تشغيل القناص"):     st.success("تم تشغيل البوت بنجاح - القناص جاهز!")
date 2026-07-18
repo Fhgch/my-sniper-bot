@@ -1,0 +1,10 @@
+import streamlit as st
+
+st.title("لوحة تحكم القناص - Sniper Bot")
+st.write("أهلاً بك يا هارث. تم ربط ملف الإعدادات بنجاح.")
+
+# هنا سنضيف الإعدادات لاحقاً
+st.sidebar.header("إعدادات التداول")
+lot_size = st.sidebar.number_input("حجم اللوت", value=0.1)
+if st.sidebar.button("تفعيل القناص"):
+    st.success(f"تم تفعيل القناص بحجم لوت: {lot_size}")
